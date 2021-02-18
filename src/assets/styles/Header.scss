@@ -1,0 +1,48 @@
+.text-contactenos {
+  color: #fff !important ;
+  border: none !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+
+.text-contactenos:hover {
+  color: #62b6eb !important ;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+#basic-nav-dropdown {
+  color: #62b6eb;
+}
+
+#basic-nav-dropdown:focus {
+  color: #fff;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: #fff !important;
+  text-decoration: none;
+  background: #343a40 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  text-align: center;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+  text-align: center;
+}
+
+.navbar-light .navbar-brand {
+  color: #62b6eb !important;
+}
+
+.navbar-brand:hover {
+  color: #fff !important;
+}
