@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import DataTable from 'react-data-table-component';
 import { useHistory } from 'react-router';
 import { getUsers, setLoading } from '../actions';
-import Loader from '../components/Loader'
+import Loader from '../components/Loader';
 import '../assets/styles/Users.scss';
 
 const columns = [
@@ -51,6 +51,7 @@ const Users = (props) => {
     const { usersList, loading } = props;
 
     useEffect(() => {
+        props.setLoading(true)
         props.getUsers()
         props.setLoading(false)
     }, [])

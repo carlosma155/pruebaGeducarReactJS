@@ -1,4 +1,6 @@
 const path = require('path');
+const dotenv = require('dotenv');
+const webpack = require('webpack')
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -11,6 +13,7 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.jsx']
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -65,6 +68,9 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'assets/[name].css'
-        })
+        }),
+        new webpack.DefinePlugin({
+            'process.env': JSON.stringify(dotenv.config().parsed)
+          })
     ]
 }

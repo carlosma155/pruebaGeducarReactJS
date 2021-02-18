@@ -1,5 +1,9 @@
 import axios from 'axios';
 
+const usersUrl = process.env.USERS_URL;
+const postsUrl = process.env.POSTS_UR;
+const commentsUrl = process.env.COMMENTS_URL;
+
 export const getUsersList = (payload) => ({
     type: 'GET_USERS_LIST',
     payload
@@ -18,7 +22,7 @@ export const setError = (payload) => ({
 export const getUsers = (payload) => {
     return (dispatch) => {
         axios({
-            url: 'https://jsonplaceholder.typicode.com/users',
+            url: usersUrl,
             method: 'get'
         })
             .then(({ data }) => dispatch(getUsersList(data)))
