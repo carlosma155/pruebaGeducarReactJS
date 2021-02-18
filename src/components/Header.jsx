@@ -18,14 +18,14 @@ const Header = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                        
                     <Nav className="ml-auto">
-                        <Link to="/" className="text-contactenos btn btn-link">Contáctenos</Link>
+                        <Link to="/" className="text-contactenos btn btn-link">Hola Admin!</Link>
                         <NavDropdown title="Instituciones educativas" id="basic-nav-dropdown">
                             <NavDropdown.Item to="#action/3.1">Institución educativa La Isabela</NavDropdown.Item>
                             <NavDropdown.Item to="#action/3.2">INEM Jose Celestino Mutis</NavDropdown.Item>
                             <NavDropdown.Item to="#action/3.3">Colegio Jorge Isaacs</NavDropdown.Item>
                             <NavDropdown.Item to="#action/3.3">C.A.S.D</NavDropdown.Item>
                             <NavDropdown.Item to="#action/3.3">Centro Educativo San Bernardo</NavDropdown.Item>
-                            <NavDropdown.Item to="#action/3.3">Cafeteritos</NavDropdown.Item>
+                            <NavDropdown.Item to="#action/3.3">Instituto Cafeteritos</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>     
 
