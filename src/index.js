@@ -11,7 +11,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const initialState = {
    "usersList": [],
    "userDetails": {},
-   "loading": false
+   "postsList":[],
+   "commentsList":[],
+   "toogle": true
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import DataTable from 'react-data-table-component';
 import { useHistory } from 'react-router';
-import { getUsers, setLoading } from '../actions';
-import Loader from '../components/Loader';
+import { getUsers } from '../actions';
 import '../assets/styles/Users.scss';
 
 const columns = [
@@ -48,12 +47,10 @@ const optionsPagination = {
 
 const Users = (props) => {
 
-    const { usersList, loading } = props;
+    const { usersList } = props;
 
     useEffect(() => {
-        props.setLoading(true)
         props.getUsers()
-        props.setLoading(false)
     }, [])
 
     const history = useHistory()
@@ -67,11 +64,7 @@ const Users = (props) => {
 
     const handleClick = (row) => {
         history.push(`/users/${row.id}`)
-    }
-
-    if (loading){
-      return <Loader />  
-    } 
+    }   
 
     return (
         
@@ -109,14 +102,12 @@ const Users = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        usersList: state.usersList,
-        loading: state.loading
+        usersList: state.usersList
     }
 }
 
 const mapToDispatchToProps = {
-    getUsers,
-    setLoading
+    getUsers    
 }
 
 export default connect(mapStateToProps, mapToDispatchToProps) (Users);
