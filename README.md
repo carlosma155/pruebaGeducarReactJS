@@ -1,5 +1,5 @@
 # pruebaReactJSGeducar
-Prueba de React JS para GEDUCAR 18/Feb/2021
+Prueba de React JS para GEDUCAR 2020
 
 # script para ejecutar la prueba => npm run start
 
